@@ -1,0 +1,780 @@
+/** @format */
+:root {
+  --mygray: #999;
+  --myblue: #266cfb;
+  --myorange: #f7d807;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.mymenubtn {
+  display: none;
+}
+ul {
+  margin: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+
+  color: inherit;
+}
+.top-header ul {
+  list-style-type: none;
+}
+.top-header ul li a {
+  border-right: 1px solid gray;
+  padding: 0rem 1rem;
+  font-size: 0.9rem;
+}
+.top-header ul li:last-child a {
+  border-right: 0px solid gray;
+}
+.top-header a {
+  text-decoration: none;
+}
+.selectCateg {
+  background-color: #f7f7f7;
+  border: none;
+  font-size: 0.9rem;
+  text-align: center;
+}
+#form1 {
+  padding: 0.7rem 2rem !important  ;
+  width: 18rem;
+}
+/* .midHeader {
+  position: fixed;
+
+  background-color: white;
+} */
+.wishBasket {
+  font-size: 2rem;
+  color: var(--mygray);
+  padding: 0 1rem;
+}
+.myaccounteur li {
+  position: relative;
+}
+li .dropDown {
+  position: absolute;
+  top: 0rem;
+  left: 0;
+  transition: 1s;
+  opacity: 0;
+  width: 100%;
+  padding: 0.5rem;
+  z-index: 55;
+  background-color: red;
+}
+.modalDialog {
+  background-color: #f7f7f7;
+  width: 80%;
+  display: block;
+  flex-direction: column;
+  left: 50%;
+  transform: translateX(-50%);
+  position: fixed;
+  top: 1rem;
+  z-index: 5055;
+}
+.btns button.btn {
+  cursor: pointer !important;
+}
+.modalDialog .heading {
+  background-color: gray;
+}
+.modalDialog .heading button {
+  font-size: 1.8rem;
+}
+
+.opened {
+  top: 2rem !important;
+  opacity: 1 !important;
+}
+.wishBasket i {
+  color: white;
+  position: relative;
+
+  text-shadow: 0px 0px 1px black;
+}
+.wishBasket i:hover {
+  text-shadow: 0px 0px 5px var(--myblue);
+}
+.wishBasket small {
+  font-size: 0.9rem;
+  color: var(--mygray);
+}
+.wishBasket .count {
+  position: absolute;
+  top: -1rem;
+  right: -1.2rem;
+  color: white;
+  background-color: var(--myblue);
+  padding: 0.2rem 0.3rem;
+  font-size: 0.8rem;
+  border-radius: 50%;
+}
+.lastHeader {
+  background-color: var(--myblue);
+  padding: 0.5rem;
+}
+.lastHeader .dropdown,
+.lastHeader button {
+  color: var(--myorange) !important;
+}
+.dropdown i {
+  padding: 0 0.5rem;
+}
+.menu {
+  width: 25%;
+}
+.active {
+  text-decoration: underline;
+}
+.navigation {
+  color: white;
+}
+.navigation a {
+  padding: 0 2rem;
+}
+.navigation a:hover {
+  color: inherit;
+  text-decoration: underline;
+}
+.banner {
+  padding: 1rem 0.5rem;
+}
+.banner .item {
+  margin: 1rem 0;
+}
+.banner .rightSide {
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.mybigcarusel {
+  height: 65vh !important;
+}
+.carousel-item {
+  position: relative;
+}
+.infoElement {
+  width: 30%;
+  position: absolute;
+  top: 25%;
+  left: 10%;
+}
+.infoElement h2 {
+  font-weight: bolder;
+}
+.caruselthree {
+  position: absolute;
+  left: -50%;
+  bottom: 0%;
+}
+.caruselthree button {
+  width: 1rem !important;
+  height: 1rem !important;
+  border-radius: 50% !important;
+  background-color: white !important;
+  padding-left: 0.5rem;
+}
+.caruselthree button:hover {
+  background-color: var(--myblue) !important;
+}
+.caruselthree .active {
+  background-color: var(--myblue) !important;
+}
+.mycaruselbutton {
+  padding: 0.5rem 1rem;
+  background-color: var(--myblue);
+  color: white;
+  border-radius: 1rem;
+  border: 0px solid white;
+  font-weight: lighter;
+}
+.mycaruselbutton:hover {
+  background-color: black;
+  color: white;
+}
+.banner .rightBanner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.rightSide .img:hover {
+  transition: 1s;
+}
+.rightSide .img {
+  display: inline-block;
+  height: 100%;
+  transition: 0.5s;
+  position: relative;
+}
+.rightSide .img:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 555;
+  box-shadow: 0px 0px 1px 10px grey inset;
+}
+.section2 h3 {
+  font-weight: lighter;
+  padding: 0rem 2rem;
+}
+.section2 hr {
+  width: 40%;
+}
+.mythreea li a:hover {
+  color: black !important;
+}
+.mythreea li {
+  padding-left: 2rem;
+}
+.mytwocard {
+  position: relative;
+  width: calc(100 / 5);
+}
+.myfirstcard {
+  width: 100%;
+  text-align: center;
+
+  font-weight: lighter;
+  border: 0px;
+  border-right: 1px 1px 5px solid grey !important;
+  animation-delay: 3000s;
+}
+.myfirstcard a {
+  font-size: 0.8rem;
+}
+.myfourimages img:hover {
+  transform: scale(1.1);
+  border: 5px solid lightgrey;
+}
+.mysecondcard {
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+  font-weight: lighter;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: 0.5s;
+}
+.mytwocard:hover .mysecondcard {
+  opacity: 1;
+  border: 1px 5px 5px grey;
+}
+.mysecondcard a {
+  font-size: 0.8rem;
+}
+.mycardfirsta {
+  color: grey;
+}
+.mycardfirsta:hover {
+  color: black;
+}
+.MYCARDBUTTON {
+  position: absolute;
+  bottom: -5%;
+  right: 30%;
+  z-index: 5;
+}
+.MYCARDBUTTON:hover {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+.mythreeheart a {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  padding-top: 0.4rem;
+  border-radius: 50%;
+  color: white;
+  background-color: #999;
+  margin-bottom: 0.7rem;
+}
+.mythreeheart a:hover {
+  background-color: #266cfb !important;
+}
+.mythreeheart {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+}
+.myfourimages {
+  font-size: 0.8rem;
+}
+.twoimage {
+  height: 30vh;
+}
+/* .twoimage:hover {
+  box-shadow: 5px 5px grey;
+  box-shadow: -5px -5px grey;
+} */
+.fourimagesandcard {
+  display: flex;
+  width: 100%;
+  font-size: 0.8rem;
+}
+.twoimagesandcard {
+  /* width: calc(100% / 2); */
+  position: relative;
+}
+.visiblecard {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: none;
+}
+.twoimagesandcard:hover .visiblecard {
+  display: block;
+}
+.realimagecard {
+  position: relative;
+  border: 0px !important;
+}
+.realimagecard > div a {
+  padding-left: 0.6rem;
+}
+.mymobilecategory h6 {
+  color: rgba(0, 0, 0, 0.8);
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-weight: normal;
+}
+.mymobilecategory h6:hover {
+  text-decoration: underline;
+}
+.mymobilecategory li {
+  color: grey;
+  font-weight: lighter;
+  padding-bottom: 0.3rem;
+}
+.mymobilecategory img:hover {
+  transform: scale(1.1);
+}
+.mymobilecategory li:last-child:hover {
+  text-decoration: underline;
+}
+.mymobilecategory li:last-child {
+  padding-top: 1rem;
+  color: #266cfb;
+}
+.threemobileimage img:hover {
+  transform: scale(1.1);
+  border: 5px solid lightgrey;
+}
+.fivelogo * {
+  user-select: none;
+}
+.fivelogo {
+  display: flex;
+  justify-content: space-evenly;
+  opacity: 0.4;
+  border: 1px solid grey;
+  padding: 1.8rem 0rem;
+  align-items: center;
+  width: 100%;
+  margin: 0px auto;
+  overflow-x: scroll;
+}
+
+/* .fivelogo a img:hover {
+  color: black;
+} */
+.mybluemail {
+  width: 50%;
+}
+.mybluemail button:hover {
+  color: #2986cc;
+}
+.mybluesection {
+  font-size: 0.9rem;
+}
+.bluediv {
+  width: 100%;
+  display: flex;
+  /* column-gap: 2rem; */
+  align-items: center;
+  padding: 5rem 0rem 1rem 5rem;
+}
+.myheadoffooter {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  /* gap: 5rem; */
+}
+.myheadoffooter > div {
+  width: calc(100% / 4);
+}
+.myinformation li a:hover {
+  color: #2986cc !important ;
+}
+.myinformation li {
+  padding-bottom: 0.5rem;
+}
+
+.ourblog img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 15px;
+  margin-right: 0.7rem;
+}
+.ourblog img:hover {
+  transform: scale(1.1);
+}
+.midfooter {
+  border-bottom: 1px solid lightgrey;
+  border-top: 1px solid lightgrey;
+  padding: 1rem 0rem;
+}
+.mylastlinks ul {
+  display: flex;
+  gap: 0.3rem;
+}
+.mylastlinks a {
+  padding: 0.3rem 0.5rem !important;
+  border-radius: 50%;
+
+  color: white;
+}
+.facebooklink {
+  background-color: #266cfb;
+}
+.twitterlink {
+  background-color: #2986cc;
+}
+.googlelink {
+  background-color: red;
+}
+.instagramlink {
+  background-color: blueviolet;
+}
+.lastoffooter ul li {
+  width: calc(100% / 10);
+  border-right: 1px solid grey;
+  font-size: 0.8rem;
+  text-align: center;
+}
+.lastoffooter2 ul li {
+  width: calc(100% / 10);
+  border-right: 1px solid grey;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.lastoffooter2 ul li:hover {
+  color: black;
+}
+.lastoffooter ul li:hover {
+  color: black;
+}
+.mylastdiv h6 {
+  text-align: center !important;
+  font-size: 0.8rem;
+}
+.mydownarrow {
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 2rem;
+  padding-left: 0.5rem;
+
+  border-radius: 50%;
+  color: white;
+  background-color: #266cfb;
+  position: fixed;
+  right: 5%;
+  bottom: 10%;
+}
+.mydownarrow :hover {
+}
+@media screen and (max-width: 992px) {
+  header {
+    width: 100% !important;
+  }
+  section {
+    width: 100% !important;
+  }
+  .header {
+    width: 100%;
+  }
+  .lastHeader {
+    display: none;
+  }
+  .mydemo {
+    display: none;
+  }
+  .myaccounteur {
+    display: none;
+  }
+  .myabeloimg {
+    position: absolute;
+    top: 2%;
+    left: 30%;
+  }
+  .wishBasket {
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    font-size: 2rem;
+  }
+  .wishBasket i {
+    padding-right: 0.5rem;
+  }
+  .wishBasket small {
+    display: none;
+  }
+  .wishBasket .count {
+    position: absolute;
+    top: -0.5rem;
+    right: -0.3rem;
+    color: white;
+    background-color: var(--myblue);
+    padding: 0.2rem 0.3rem;
+    font-size: 0.4rem;
+    border-radius: 50%;
+  }
+  .mymenubtn {
+    display: block;
+  }
+  #form1 {
+    padding: 0.7rem 2rem !important  ;
+    width: 8rem;
+  }
+  .selectCateg {
+    width: 8rem;
+    height: 14vh;
+  }
+  .input-group {
+    display: flex !important;
+  }
+  .section2 {
+    width: 100%;
+  }
+  .mybigcarusel {
+    height: 100vh !important;
+  }
+  .infoElement {
+    position: absolute;
+    top: 20%;
+  }
+  .infoElement h2 {
+    font-size: 1rem;
+  }
+  .infoElement p {
+    font-size: 0.7rem;
+  }
+  .caruselthree {
+    font-size: 0.7rem !important;
+  }
+  .infoElement a {
+    font-size: 0.7rem;
+  }
+  .threeimagecarusel {
+    width: 100% !important;
+  }
+  .rightSide {
+    width: 100% !important;
+  }
+  .rightSide .img {
+    width: 100%;
+  }
+  .rightSide .img img {
+    width: 100%;
+  }
+  .mytwocarddiv {
+    width: calc(100%2);
+    display: inline-block !important;
+  }
+  .myfirstcard {
+    width: 100%;
+  }
+  .mysecondcard .MYCARDBUTTON {
+    right: 35%;
+  }
+  .myarrivals {
+    width: 100%;
+  }
+  .mythreeadiv {
+    display: none;
+  }
+  .myfourimages img {
+    height: 60vh;
+  }
+  .fourimagesandcard {
+    text-align: center;
+  }
+  .mymobilecategory img {
+    width: 100%;
+  }
+  .mybluemail {
+    width: 20rem;
+  }
+  .myheadoffooter > div {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .myandourblog img {
+    padding-right: 1rem;
+  }
+  .ourblog {
+    margin-bottom: 1rem;
+  }
+  .midfooter > div {
+    margin-bottom: 2rem;
+  }
+  .lastoffooter2 {
+    display: flex;
+  }
+  .lastoffooter2 ul {
+    width: 100%;
+  }
+  .lastoffooter2 ul li {
+    width: calc(100% / 3);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .lastHeader {
+    display: none;
+  }
+  .mydemo {
+    display: none;
+  }
+  .searchbutton {
+    margin-top: 3rem;
+  }
+  .myaccounteur {
+    display: none;
+  }
+  .myabeloimg {
+    position: absolute;
+    top: 2%;
+    left: 30%;
+  }
+  .mymenubtn {
+    display: block;
+  }
+  .wishBasket {
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    font-size: 2rem;
+  }
+  .wishBasket i {
+    padding-right: 0.5rem;
+  }
+  .wishBasket small {
+    display: none;
+  }
+  .wishBasket .count {
+    position: absolute;
+    top: -0.5rem;
+    right: -0.3rem;
+    color: white;
+    background-color: var(--myblue);
+    padding: 0.2rem 0.3rem;
+    font-size: 0.4rem;
+    border-radius: 50%;
+  }
+  #form1 {
+    padding: 0.7rem 2rem !important  ;
+    width: 8rem;
+  }
+  .carousel-item {
+    position: relative;
+  }
+  .caruselthree {
+    position: absolute;
+    bottom: 10%;
+    font-size: 0.3rem !important;
+  }
+  .threeimagecarusel {
+    width: 100% !important;
+  }
+  .rightSide {
+    width: 100% !important;
+  }
+  .rightSide .img {
+    width: 100%;
+  }
+  .selectCateg {
+    width: 8rem;
+    height: 14vh;
+  }
+  .input-group {
+    display: flex !important;
+  }
+  .section2 {
+    width: 100%;
+  }
+  .mytwocarddiv {
+    width: calc(100%);
+    display: block;
+    margin: 0px auto !important;
+  }
+  .myfirstcard {
+    width: 100%;
+  }
+  .mysecondcard .MYCARDBUTTON {
+    right: 35%;
+  }
+  .myarrivals {
+    width: 100%;
+  }
+  .mythreeadiv {
+    display: none;
+  }
+  .myfourimages img {
+    height: 40vh;
+  }
+  .fourimagesandcard {
+    text-align: center;
+  }
+  .threemobileimage {
+    width: 100%;
+  }
+  .threemobileimage img {
+    width: 100%;
+  }
+  .mymobilecategory img {
+    width: 100%;
+  }
+  .mybluemail {
+    width: 20rem;
+  }
+  .myheadoffooter > div {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .myandourblog img {
+    padding-right: 1rem;
+  }
+  .ourblog {
+    margin-bottom: 1rem;
+  }
+
+  .midfooter > div {
+    margin-bottom: 2rem;
+  }
+  .lastoffooter2 {
+    display: flex;
+  }
+  .lastoffooter2 ul {
+    width: 100%;
+  }
+  .lastoffooter2 ul li {
+    width: calc(100% / 3);
+  }
+}

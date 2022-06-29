@@ -1,0 +1,1666 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/253b27f238.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="border-bottom">
+        <div class="container">
+          <div class="row top-header p-2 align-items-center">
+            <div>
+              <a href="#"><i class="fa-solid fa-bars mymenubtn"></i></a>
+            </div>
+            <div class="col-8 mydemo"><a href="#">demo@posthemes.com</a></div>
+            <div class="col-4 myaccounteur">
+              <ul class="d-flex">
+                <li onclick="openDropDown()">
+                  <a href="#"> My Account</a>
+                  <div class="dropDown" id="dropDown">
+                    <ul>
+                      <li>Kamal</li>
+                      <li>Sefter</li>
+                      <li>Resul</li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="#">EUR $</a>
+                  <div class="dropDown" id="dropDown"></div>
+                </li>
+                <li>
+                  <a href="#">English </a>
+                  <div class="dropDown" id="dropDown"></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="midHeader p-4">
+          <div class="row">
+            <div class="col-3 myabeloimg">
+              <img
+                src="http://demo2.posthemes.com/pos_abelo/layout2/img/pos-abelo-logo-1580439594.jpg"
+                alt=""
+              />
+            </div>
+            <div class="col-9 d-flex searchbutton">
+              <div class="searcBar d-flex">
+                <select class="bootstrap-select selectCateg p-2" name="poscats">
+                  <option value="0">All categories</option>
+                  <option value="12">Phones &amp; Accessories</option>
+                  <option value="13">- - Hot Categories</option>
+                  <option value="19">- - - - Dresses</option>
+                  <option value="20">- - - - Jackets &amp; Coats</option>
+                  <option value="21">- - - - Sweaters</option>
+                  <option value="22">- - - - Jeans</option>
+                  <option value="23">- - - - Blouses &amp; Shirts</option>
+                  <option value="14">- - Outerwear &amp; Jackets</option>
+                </select>
+                <div class="input-group">
+                  <div class="form-outline">
+                    <input type="search" id="form1" class="form-control" />
+                  </div>
+                  <button type="button" class="btn btn-primary">Search</button>
+                </div>
+              </div>
+              <div class="wishBasket">
+                <a href="#"
+                  ><i class="fa-solid fa-heart">
+                    <span class="count">0</span></i
+                  >
+                  <small>Wishlist</small>
+                </a>
+                <a href="#"
+                  ><i class="fa-solid fa-cart-shopping"
+                    ><span class="count">0</span></i
+                  >
+                  <small>My Cart</small>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lastHeader">
+        <div class="container">
+          <div class="row">
+            <div class="menu col-3">
+              <div class="dropdown">
+                <button
+                  class="btn dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fa-solid fa-bars"></i>
+                  Dropdown button
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="navigation col-9 d-flex align-items-center">
+              <ul class="d-flex">
+                <li>
+                  <a class="active" href="#">Home</a>
+                </li>
+                <li>
+                  <a href="#">Legal Notice</a>
+                </li>
+                <li>
+                  <a href="#">Home</a>
+                </li>
+                <li>
+                  <a href="#">Home</a>
+                </li>
+                <li>
+                  <a href="#">Home <i class="fa-solid fa-caret-down"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="modalDialog d-none" id="modalDialog">
+        <div class="heading d-flex w-100 px-4 justify-content-between">
+          <p>Product Successfully Added To Your Shopping Cart</p>
+          <button class="btn" onclick="closeModal()">X</button>
+        </div>
+        <div class="modal-body d-flex">
+          <div class="left d-flex w-50">
+            <div class="w-50">
+              <img
+                width="100%"
+                height="auto"
+                src="http://demo2.posthemes.com/pos_abelo/layout2/24-home_default/originals-kaval-windbreaker-winter-jacket.jpg"
+                alt=""
+              />
+            </div>
+            <div class="p-4 w-50">
+              <h5>Wireless Stereo Speaker</h5>
+              <div>
+                <p>$23.90</p>
+                <p>Size: <span>S</span></p>
+                <p>Color: <span>Black</span></p>
+                <p>Quantity: <span>4</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 right w-50">
+            <p>There are 6 items in your cart.</p>
+
+            <p>Total products: $136.50</p>
+
+            <p>Total shipping: $7.00</p>
+
+            <p>Taxes $0.00</p>
+
+            <p>Total: $143.50 (tax excl.)</p>
+            <div class="btns">
+              <button class="btn btn-info">Continue Shopping</button>
+              <button class="btn btn-primary">Proceed to Checkout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="container section1 pb-3">
+        <div class="row banner">
+          <div class="col-12 col-lg-8 col-md-12">
+            <div
+              id="carouselExampleDark"
+              class="carousel carousel-dark slide mt-3"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-indicators caruselthree">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleDark"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleDark"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleDark"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+              <div class="carousel-inner mybigcarusel">
+                <div class="carousel-item active" data-bs-interval="10000">
+                  <img
+                    src="http://demo2.posthemes.com/pos_abelo/layout2/modules/posslideshows/images/494055de8e2f107aec0ad02805763f4e4cdb4d0c_slide_2.1.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                  <div
+                    class="carousel-caption d-none d-md-block infoElement"
+                    data-aos="zoom-in-down"
+                  >
+                    <h2>Bluetooth Smart Lamp Speakers</h2>
+                    <p class="pt-3 pb-3">
+                      Smart Alarm Clock + RGB Colored Ligh
+                    </p>
+                    <a href="№" class="mycaruselbutton">SHOP NOW</a>
+                  </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                  <img
+                    src="http://demo2.posthemes.com/pos_abelo/layout2/modules/posslideshows/images/f8c1d59e45d7b429abd9d2d9c530dfbc6a53ec47_slide_2.2.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                  <div
+                    class="carousel-caption d-none d-md-block infoElement"
+                    data-aos="zoom-in-down"
+                  >
+                    <h2>Original Samsung Galaxy Watch</h2>
+                    <p class="pt-3 pb-3">Support 2G Internet & Sim card</p>
+                    <a href="№" class="mycaruselbutton">SHOP NOW</a>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="http://demo2.posthemes.com/pos_abelo/layout2/modules/posslideshows/images/698d971976ce8ac0fe00150bdf58f07794be377b_slide_2.3.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                    ,
+                  />
+                  <div
+                    class="carousel-caption d-none d-md-block infoElement"
+                    data-aos="zoom-in-down"
+                  >
+                    <h2>Audio-Technica ATH-M50x</h2>
+                    <p class="pt-3 pb-3">Professional Monitor Headphones</p>
+                    <a href="№" class="mycaruselbutton">SHOP NOW</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 col-md-12 rightBanner">
+            <div class="item threeimagecarusel">
+              <div class="rightSide">
+                <div class="img">
+                  <img
+                    src="http://demo2.posthemes.com/pos_abelo/layout2/img/cms/cms_2.1.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="img"></div>
+              <div class="rightSide">
+                <div class="img">
+                  <img
+                    src="http://demo2.posthemes.com/pos_abelo/layout2/img/cms/cms_2.2.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="img"></div>
+              <div class="rightSide">
+                <div class="img">
+                  <img
+                    src="http://demo2.posthemes.com/pos_abelo/layout2/img/cms/cms_2.3.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section2 container pt-3 pb-5">
+        <div class="d-flex align-items-center pb-5 myarrivals">
+          <h3>New Arrivals</h3>
+          <hr class="text-dark" />
+          <div class="mythreeadiv">
+            <ul class="d-flex mythreea">
+              <li><a class="text-dark" href="#">Home Audio</a></li>
+
+              <li><a class="text-secondary" href="#">Headphones</a></li>
+
+              <li><a class="text-secondary" href="#">Cameras</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="d-flex mytwocarddiv">
+          <div class="mytwocard">
+            <div class="card myfirstcard">
+              <img
+                src="http://demo2.posthemes.com/pos_abelo/layout2/72-home_default/brown-bear-cushion.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <a href="№" class="mycardfirsta">STUDIO DESIGN</a>
+                <h6 class="pt-2 pb-2">
+                  <a href="#">WIRELISS STEREO SPEAKERS</a>
+                </h6>
+                <h5 class="card-title">$23.90</h5>
+              </div>
+            </div>
+            <div class="card mysecondcard">
+              <img
+                src="http://demo2.posthemes.com/pos_abelo/layout2/26-home_default/originals-kaval-windbreaker-winter-jacket.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <a href="№" class="mycardfirsta">STUDIO DESIGN</a>
+                <h6 class="pt-2 pb-2">
+                  <a href="#">WIRELISS STEREO SPEAKERS</a>
+                </h6>
+                <h5 class="card-title">$23.90</h5>
+
+                <a href="#" class="btn btn-primary MYCARDBUTTON">ADD TO CARD</a>
+                <div class="mythreeheart">
+                  <a href="#"><i class="fa-solid fa-heart"></i></a>
+                  <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                  <a href="#"><i class="fa-solid fa-arrow-rotate-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mytwocard">
+            <div class="card myfirstcard">
+              <img
+                src="http://demo2.posthemes.com/pos_abelo/layout2/26-home_default/originals-kaval-windbreaker-winter-jacket.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <a href="№" class="mycardfirsta">STUDIO DESIGN</a>
+                <h6 class="pt-2 pb-2">
+                  <a href="#">WIRELISS STEREO SPEAKERS</a>
+                </h6>
+                <h5 class="card-title">$28.90</h5>
+              </div>
+            </div>
+            <div class="card mysecondcard">
+              <img
+                src="http://demo2.posthemes.com/pos_abelo/layout2/55-home_default/trans-weight-hooded-wind-and-water-resistant-shell.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <a href="№" class="mycardfirsta">STUDIO DESIGN</a>
+                <h6 class="pt-2 pb-2">
+                  <a href="#">WIRELISS STEREO SPEAKERS</a>
+                </h6>
+                <h5 class="card-title">$28.90</h5>
+                <a href="#" class="btn btn-primary MYCARDBUTTON">ADD TO CARD</a>
+                <div class="mythreeheart">
+                  <a href="#"><i class="fa-solid fa-heart"></i></a>
+                  <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                  <a href="#"><i class="fa-solid fa-arrow-rotate-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mytwocard">
+            <div class="card myfirstcard">
+              <img
+                src="http://demo2.posthemes.com/pos_abelo/layout2/67-home_default/new-balance-fresh-foam-kaymin.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <a href="№" class="mycardfirsta">STUDIO DESIGN</a>
+                <h6 class="pt-2 pb-2">
+                  <a href="#">WIRELISS STEREO SPEAKERS</a>
+                </h6>
+                <h5 class="card-title">$33.90</h5>
+              </div>
+            </div>
+            <div class="card mysecondcard">
+              <img
+                src="http://demo2.posthemes.com/pos_abelo/layout2/83-home_default/juicy-couture-tricot-logo-stripe-jacket.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <a href="№" class="mycardfirsta">STUDIO DESIGN</a>
+                <h6 class="pt-2 pb-2">
+                  <a href="#">WIRELISS STEREO SPEAKERS</a>
+                </h6>
+                <h5 class="card-title">$33.90</h5>
+                <a href="#" class="btn btn-primary MYCARDBUTTON">ADD TO CARD</a>
+                <div class="mythreeheart">
+                  <a href="#"><i class="fa-solid fa-heart"></i></a>
+                  <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                  <a href="#"><i class="fa-solid fa-arrow-rotate-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mytwocard">
+            <div class="card myfirstcard">
+              <img
+                src="http://demo2.posthemes.com/pos_abelo/layout2/55-home_default/trans-weight-hooded-wind-and-water-resistant-shell.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <a href="№" class="mycardfirsta">STUDIO DESIGN</a>
+                <h6 class="pt-2 pb-2">
+                  <a href="#">WIRELISS STEREO SPEAKERS</a>
+                </h6>
+                <h5 class="card-title">$63.90</h5>
+              </div>
+            </div>
+            <div class="card mysecondcard">
+              <img
+                src="http://demo2.posthemes.com/pos_abelo/layout2/67-home_default/new-balance-fresh-foam-kaymin.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <a href="№" class="mycardfirsta">STUDIO DESIGN</a>
+                <h6 class="pt-2 pb-2">
+                  <a href="#">WIRELISS STEREO SPEAKERS</a>
+                </h6>
+                <h5 class="card-title">$63.90</h5>
+                <a href="#" class="btn btn-primary MYCARDBUTTON">ADD TO CARD</a>
+                <div class="mythreeheart">
+                  <a href="#"><i class="fa-solid fa-heart"></i></a>
+                  <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                  <a href="#"><i class="fa-solid fa-arrow-rotate-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mytwocard">
+            <div class="card myfirstcard">
+              <img
+                src="http://demo2.posthemes.com/pos_abelo/layout2/88-home_default/brown-bear-vector-graphics.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <a href="№" class="mycardfirsta">STUDIO DESIGN</a>
+                <h6 class="pt-2 pb-2">
+                  <a href="#">WIRELISS STEREO SPEAKERS</a>
+                </h6>
+                <h5 class="card-title">$13.90</h5>
+              </div>
+            </div>
+            <div class="card mysecondcard">
+              <img
+                src="http://demo2.posthemes.com/pos_abelo/layout2/34-home_default/brixton-patrol-all-terrain-anorak-jacket.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <a href="№" class="mycardfirsta">STUDIO DESIGN</a>
+                <h6 class="pt-2 pb-2">
+                  <a href="#">WIRELISS STEREO SPEAKERS</a>
+                </h6>
+                <h5 class="card-title">$13.90</h5>
+                <a href="#" class="btn btn-primary MYCARDBUTTON">ADD TO CARD</a>
+                <div class="mythreeheart">
+                  <a href="#"><i class="fa-solid fa-heart"></i></a>
+                  <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                  <a href="#"><i class="fa-solid fa-arrow-rotate-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex mytwocarddiv">
+          <div class="mytwocard">
+            <div class="card myfirstcard">
+              <img
+                src="http://demo2.posthemes.com/pos_abelo/layout2/72-home_default/brown-bear-cushion.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <a href="№" class="mycardfirsta">STUDIO DESIGN</a>
+                <h6 class="pt-2 pb-2">
+                  <a href="#">WIRELISS STEREO SPEAKERS</a>
+                </h6>
+                <h5 class="card-title">$23.90</h5>
+              </div>
+            </div>
+            <div class="card mysecondcard">
+              <img
+                src="http://demo2.posthemes.com/pos_abelo/layout2/26-home_default/originals-kaval-windbreaker-winter-jacket.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <a href="№" class="mycardfirsta">STUDIO DESIGN</a>
+                <h6 class="pt-2 pb-2">
+                  <a href="#">WIRELISS STEREO SPEAKERS</a>
+                </h6>
+                <h5 class="card-title">$23.90</h5>
+
+                <a href="#" class="btn btn-primary MYCARDBUTTON">ADD TO CARD</a>
+                <div class="mythreeheart">
+                  <a href="#"><i class="fa-solid fa-heart"></i></a>
+                  <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                  <a href="#"><i class="fa-solid fa-arrow-rotate-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mytwocard">
+            <div class="card myfirstcard">
+              <img
+                src="http://demo2.posthemes.com/pos_abelo/layout2/26-home_default/originals-kaval-windbreaker-winter-jacket.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <a href="№" class="mycardfirsta">STUDIO DESIGN</a>
+                <h6 class="pt-2 pb-2">
+                  <a href="#">WIRELISS STEREO SPEAKERS</a>
+                </h6>
+                <h5 class="card-title">$28.90</h5>
+              </div>
+            </div>
+            <div class="card mysecondcard">
+              <img
+                src="http://demo2.posthemes.com/pos_abelo/layout2/55-home_default/trans-weight-hooded-wind-and-water-resistant-shell.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <a href="№" class="mycardfirsta">STUDIO DESIGN</a>
+                <h6 class="pt-2 pb-2">
+                  <a href="#">WIRELISS STEREO SPEAKERS</a>
+                </h6>
+                <h5 class="card-title">$28.90</h5>
+                <a href="#" class="btn btn-primary MYCARDBUTTON">ADD TO CARD</a>
+                <div class="mythreeheart">
+                  <a href="#"><i class="fa-solid fa-heart"></i></a>
+                  <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                  <a href="#"><i class="fa-solid fa-arrow-rotate-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mytwocard">
+            <div class="card myfirstcard">
+              <img
+                src="http://demo2.posthemes.com/pos_abelo/layout2/67-home_default/new-balance-fresh-foam-kaymin.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <a href="№" class="mycardfirsta">STUDIO DESIGN</a>
+                <h6 class="pt-2 pb-2">
+                  <a href="#">WIRELISS STEREO SPEAKERS</a>
+                </h6>
+                <h5 class="card-title">$33.90</h5>
+              </div>
+            </div>
+            <div class="card mysecondcard">
+              <img
+                src="http://demo2.posthemes.com/pos_abelo/layout2/83-home_default/juicy-couture-tricot-logo-stripe-jacket.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <a href="№" class="mycardfirsta">STUDIO DESIGN</a>
+                <h6 class="pt-2 pb-2">
+                  <a href="#">WIRELISS STEREO SPEAKERS</a>
+                </h6>
+                <h5 class="card-title">$33.90</h5>
+                <a href="#" class="btn btn-primary MYCARDBUTTON">ADD TO CARD</a>
+                <div class="mythreeheart">
+                  <a href="#"><i class="fa-solid fa-heart"></i></a>
+                  <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                  <a href="#"><i class="fa-solid fa-arrow-rotate-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mytwocard">
+            <div class="card myfirstcard">
+              <img
+                src="http://demo2.posthemes.com/pos_abelo/layout2/55-home_default/trans-weight-hooded-wind-and-water-resistant-shell.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <a href="№" class="mycardfirsta">STUDIO DESIGN</a>
+                <h6 class="pt-2 pb-2">
+                  <a href="#">WIRELISS STEREO SPEAKERS</a>
+                </h6>
+                <h5 class="card-title">$63.90</h5>
+              </div>
+            </div>
+            <div class="card mysecondcard">
+              <img
+                src="http://demo2.posthemes.com/pos_abelo/layout2/67-home_default/new-balance-fresh-foam-kaymin.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <a href="№" class="mycardfirsta">STUDIO DESIGN</a>
+                <h6 class="pt-2 pb-2">
+                  <a href="#">WIRELISS STEREO SPEAKERS</a>
+                </h6>
+                <h5 class="card-title">$63.90</h5>
+                <a href="#" class="btn btn-primary MYCARDBUTTON">ADD TO CARD</a>
+                <div class="mythreeheart">
+                  <a href="#"><i class="fa-solid fa-heart"></i></a>
+                  <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                  <a href="#"><i class="fa-solid fa-arrow-rotate-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mytwocard">
+            <div class="card myfirstcard">
+              <img
+                src="http://demo2.posthemes.com/pos_abelo/layout2/88-home_default/brown-bear-vector-graphics.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <a href="№" class="mycardfirsta">STUDIO DESIGN</a>
+                <h6 class="pt-2 pb-2">
+                  <a href="#">WIRELISS STEREO SPEAKERS</a>
+                </h6>
+                <h5 class="card-title">$13.90</h5>
+              </div>
+            </div>
+            <div class="card mysecondcard">
+              <img
+                src="http://demo2.posthemes.com/pos_abelo/layout2/34-home_default/brixton-patrol-all-terrain-anorak-jacket.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <a href="№" class="mycardfirsta">STUDIO DESIGN</a>
+                <h6 class="pt-2 pb-2">
+                  <a href="#">WIRELISS STEREO SPEAKERS</a>
+                </h6>
+                <h5 class="card-title">$13.90</h5>
+                <a href="#" class="btn btn-primary MYCARDBUTTON">ADD TO CARD</a>
+                <div class="mythreeheart">
+                  <a href="#"><i class="fa-solid fa-heart"></i></a>
+                  <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                  <a href="#"><i class="fa-solid fa-arrow-rotate-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="myfourimages row justify-content-around pt-5 pb-5">
+          <img
+            class="col-12 col-lg-6 col-md-12 twoimage mb-5"
+            src="http://demo2.posthemes.com/pos_abelo/layout2/img/cms/cms_2.4.jpg"
+            alt=""
+          />
+
+          <img
+            class="col-12 col-lg-6 col-md-12 twoimage"
+            src="http://demo2.posthemes.com/pos_abelo/layout2/img/cms/cms_2.5.jpg"
+            alt=""
+          />
+        </div>
+      </section>
+      <section class="section2 container pt-3 pb-5">
+        <div class="d-flex align-items-center pb-5">
+          <h3>Best Sellers</h3>
+          <hr class="text-dark w-75" />
+        </div>
+        <div class="fourimagesandcard row">
+          <div class="twoimagesandcard col-12 col-lg-6 col-md-12 mb-3">
+            <div class="card mb-3 realimagecard">
+              <div class="row g-0">
+                <div class="col-md-6">
+                  <img
+                    src="http://demo2.posthemes.com/pos_abelo/layout2/34-home_default/brixton-patrol-all-terrain-anorak-jacket.jpg"
+                    class="img-fluid rounded-start"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <a href="№" class="mycardfirsta">STUDIO DESIGN</a>
+                    <h6 class="pt-2 pb-2">
+                      <a href="#">WIRELISS STEREO SPEAKERS</a>
+                    </h6>
+                    <p class="text-secondary pt-2 pb-2">
+                      Aviability:<span class="text-info">700 in stocks</span>
+                    </p>
+                    <p class="pb-2">
+                      Android 8.1 (Oreo), Hisilicon Kirin 710 (12 nm), Octa-core
+                      (4x2.2 GHz Cortex-A73 &amp; 4x1.7 GHz Cortex-A53),
+                      Mali-G51 MP4
+                    </p>
+                    <h5 class="card-title">$23.90</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3 visiblecard">
+              <div class="row g-0">
+                <div class="col-md-6 realimagecard">
+                  <img
+                    src="http://demo2.posthemes.com/pos_abelo/layout2/88-home_default/brown-bear-vector-graphics.jpg"
+                    class="img-fluid rounded-start"
+                    alt="..."
+                  />
+                  <div class="mythreeheart">
+                    <a href="#"><i class="fa-solid fa-heart"></i></a>
+                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href="#"
+                      ><i class="fa-solid fa-arrow-rotate-right"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <a href="№" class="mycardfirsta">STUDIO DESIGN</a>
+                    <h6 class="pt-2 pb-2">
+                      <a href="#">WIRELISS STEREO SPEAKERS</a>
+                    </h6>
+                    <p class="text-secondary pt-2 pb-2">
+                      Aviability:<span class="text-info">700 in stocks</span>
+                    </p>
+                    <p class="pb-2">
+                      Android 8.1 (Oreo), Hisilicon Kirin 710 (12 nm), Octa-core
+                      (4x2.2 GHz Cortex-A73 &amp; 4x1.7 GHz Cortex-A53),
+                      Mali-G51 MP4
+                    </p>
+                    <h5 class="card-title">$23.90</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="twoimagesandcard col-12 col-lg-6 col-md-12">
+            <div class="card mb-3 realimagecard">
+              <div class="row g-0">
+                <div class="col-md-6">
+                  <img
+                    src="http://demo2.posthemes.com/pos_abelo/layout2/88-home_default/brown-bear-vector-graphics.jpg"
+                    class="img-fluid rounded-start"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <a href="№" class="mycardfirsta">STUDIO DESIGN</a>
+                    <h6 class="pt-2 pb-2">
+                      <a href="#">WIRELISS STEREO SPEAKERS</a>
+                    </h6>
+                    <p class="text-secondary pt-2 pb-2">
+                      Aviability:<span class="text-info">700 in stocks</span>
+                    </p>
+                    <p class="pb-2">
+                      Android 8.1 (Oreo), Hisilicon Kirin 710 (12 nm), Octa-core
+                      (4x2.2 GHz Cortex-A73 &amp; 4x1.7 GHz Cortex-A53),
+                      Mali-G51 MP4
+                    </p>
+                    <h5 class="card-title">$23.90</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3 visiblecard">
+              <div class="row g-0">
+                <div class="col-md-6 realimagecard">
+                  <img
+                    src="http://demo2.posthemes.com/pos_abelo/layout2/55-home_default/trans-weight-hooded-wind-and-water-resistant-shell.jpg"
+                    class="img-fluid rounded-start"
+                    alt="..."
+                  />
+                  <div class="mythreeheart">
+                    <a href="#"><i class="fa-solid fa-heart"></i></a>
+                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href="#"
+                      ><i class="fa-solid fa-arrow-rotate-right"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <a href="№" class="mycardfirsta">STUDIO DESIGN</a>
+                    <h6 class="pt-2 pb-2">
+                      <a href="#">WIRELISS STEREO SPEAKERS</a>
+                    </h6>
+                    <p class="text-secondary pt-2 pb-2">
+                      Aviability:<span class="text-info">700 in stocks</span>
+                    </p>
+                    <p class="pb-2">
+                      Android 8.1 (Oreo), Hisilicon Kirin 710 (12 nm), Octa-core
+                      (4x2.2 GHz Cortex-A73 &amp; 4x1.7 GHz Cortex-A53),
+                      Mali-G51 MP4
+                    </p>
+                    <h5 class="card-title">$23.90</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="twoimagesandcard col-12 col-lg-6 col-md-12 mb-3">
+            <div class="card mb-3 realimagecard">
+              <div class="row g-0">
+                <div class="col-md-6">
+                  <img
+                    src="http://demo2.posthemes.com/pos_abelo/layout2/26-home_default/originals-kaval-windbreaker-winter-jacket.jpg"
+                    class="img-fluid rounded-start"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <a href="№" class="mycardfirsta">STUDIO DESIGN</a>
+                    <h6 class="pt-2 pb-2">
+                      <a href="#">WIRELISS STEREO SPEAKERS</a>
+                    </h6>
+                    <p class="text-secondary pt-2 pb-2">
+                      Aviability:<span class="text-info">700 in stocks</span>
+                    </p>
+                    <p class="pb-2">
+                      Android 8.1 (Oreo), Hisilicon Kirin 710 (12 nm), Octa-core
+                      (4x2.2 GHz Cortex-A73 &amp; 4x1.7 GHz Cortex-A53),
+                      Mali-G51 MP4
+                    </p>
+                    <h5 class="card-title">$23.90</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3 visiblecard">
+              <div class="row g-0">
+                <div class="col-md-6 realimagecard">
+                  <img
+                    src="http://demo2.posthemes.com/pos_abelo/layout2/88-home_default/brown-bear-vector-graphics.jpg"
+                    class="img-fluid rounded-start"
+                    alt="..."
+                  />
+                  <div class="mythreeheart">
+                    <a href="#"><i class="fa-solid fa-heart"></i></a>
+                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href="#"
+                      ><i class="fa-solid fa-arrow-rotate-right"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <a href="№" class="mycardfirsta">STUDIO DESIGN</a>
+                    <h6 class="pt-2 pb-2">
+                      <a href="#">WIRELISS STEREO SPEAKERS</a>
+                    </h6>
+                    <p class="text-secondary pt-2 pb-2">
+                      Aviability:<span class="text-info">700 in stocks</span>
+                    </p>
+                    <p class="pb-2">
+                      Android 8.1 (Oreo), Hisilicon Kirin 710 (12 nm), Octa-core
+                      (4x2.2 GHz Cortex-A73 &amp; 4x1.7 GHz Cortex-A53),
+                      Mali-G51 MP4
+                    </p>
+                    <h5 class="card-title">$23.90</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="twoimagesandcard col-12 col-lg-6 col-md-12">
+            <div class="card mb-3 realimagecard">
+              <div class="row g-0">
+                <div class="col-md-6">
+                  <img
+                    src="http://demo2.posthemes.com/pos_abelo/layout2/55-home_default/trans-weight-hooded-wind-and-water-resistant-shell.jpg"
+                    class="img-fluid rounded-start"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <a href="№" class="mycardfirsta">STUDIO DESIGN</a>
+                    <h6 class="pt-2 pb-2">
+                      <a href="#">WIRELISS STEREO SPEAKERS</a>
+                    </h6>
+                    <p class="text-secondary pt-2 pb-2">
+                      Aviability:<span class="text-info">700 in stocks</span>
+                    </p>
+                    <p class="pb-2">
+                      Android 8.1 (Oreo), Hisilicon Kirin 710 (12 nm), Octa-core
+                      (4x2.2 GHz Cortex-A73 &amp; 4x1.7 GHz Cortex-A53),
+                      Mali-G51 MP4
+                    </p>
+                    <h5 class="card-title">$23.90</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3 visiblecard">
+              <div class="row g-0">
+                <div class="col-md-6 realimagecard">
+                  <img
+                    src="http://demo2.posthemes.com/pos_abelo/layout2/33-home_default/juicy-couture-juicy-quilted-terry-track-jacket.jpg"
+                    class="img-fluid rounded-start"
+                    alt="..."
+                  />
+                  <div class="mythreeheart">
+                    <a href="#"><i class="fa-solid fa-heart"></i></a>
+                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href="#"
+                      ><i class="fa-solid fa-arrow-rotate-right"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <a href="№" class="mycardfirsta">STUDIO DESIGN</a>
+                    <h6 class="pt-2 pb-2">
+                      <a href="#">WIRELISS STEREO SPEAKERS</a>
+                    </h6>
+                    <p class="text-secondary pt-2 pb-2">
+                      Aviability:<span class="text-info">700 in stocks</span>
+                    </p>
+                    <p class="pb-2">
+                      Android 8.1 (Oreo), Hisilicon Kirin 710 (12 nm), Octa-core
+                      (4x2.2 GHz Cortex-A73 &amp; 4x1.7 GHz Cortex-A53),
+                      Mali-G51 MP4
+                    </p>
+                    <h5 class="card-title">$23.90</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section2 container pt-3 pb-5">
+        <div class="d-flex align-items-center pb-5">
+          <h3>Popular Categories</h3>
+          <hr class="text-dark w-75" />
+        </div>
+        <div class="row mb-5">
+          <div class="col-12 col-lg-3 col-md-6 mymobilecategory">
+            <img
+              src="http://demo2.posthemes.com/pos_abelo/layout2/modules/poslistcategories/images/048b4abd4c204f87a386aad580e8aad046e80adb_listcate1.jpg"
+              alt=""
+            />
+            <h6><a href="#">Phones & Accessories</a></h6>
+            <ul>
+              <li><a href="#">Hot Categories</a></li>
+              <li><a href="#">Outwears & Jackets</a></li>
+              <li><a href="#">Weddings & Events</a></li>
+              <li><a href="#">Bottoms</a></li>
+              <li><a href="#">Tops & Sets</a></li>
+              <li><a href="#">View All</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-lg-3 col-md-6 mymobilecategory">
+            <img
+              src="http://demo2.posthemes.com/pos_abelo/layout2/modules/poslistcategories/images/c670c99db1813a2275743471ccbb8532bb4d70b5_listcate2.jpg"
+              alt=""
+            />
+            <h6><a href="#">Home Audio</a></h6>
+            <ul>
+              <li><a href="#">Skirts</a></li>
+              <li><a href="#">Leggings</a></li>
+              <li><a href="#">Jeans</a></li>
+              <li><a href="#">Pants & Capris</a></li>
+              <li><a href="#">Shorts</a></li>
+              <li><a href="#">View All</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-lg-3 col-md-6 mymobilecategory">
+            <img
+              src="http://demo2.posthemes.com/pos_abelo/layout2/modules/poslistcategories/images/cab8a9e4c95320340a9ab850061e080fc272ce7f_listcate3.jpg"
+              alt=""
+            />
+            <h6><a href="#">Headphones</a></h6>
+            <ul>
+              <li><a href="#">Accessories & Parts</a></li>
+              <li><a href="#">Audio & Video</a></li>
+              <li><a href="#">Camera & Photos</a></li>
+              <li><a href="#">Portable Audio & Video</a></li>
+              <li><a href="#">Smart Electronics</a></li>
+              <li><a href="#">View All</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-lg-3 col-md-6 mymobilecategory">
+            <img
+              src="http://demo2.posthemes.com/pos_abelo/layout2/modules/poslistcategories/images/960fe1093f4b66c61da09f4446bd5f220c3f6f6d_listcate4.jpg"
+              alt=""
+            />
+            <h6><a href="#">Bottoms</a></h6>
+            <ul>
+              <li><a href="#">Television</a></li>
+              <li><a href="#">TV Receivers</a></li>
+              <li><a href="#">Projector</a></li>
+              <li><a href="#">Audio Amplifier Boards</a></li>
+              <li><a href="#">TV Sticks</a></li>
+              <li><a href="#">View All</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-12 col-lg-4 col-md-6 mb-3 threemobileimage">
+            <img
+              src="http://demo2.posthemes.com/pos_abelo/layout2/img/cms/cms_1.5.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-12 col-lg-4 col-md-6 mb-3 threemobileimage">
+            <img
+              src="http://demo2.posthemes.com/pos_abelo/layout2/img/cms/cms_1.6.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-12 col-lg-4 col-md-6 mb-3 threemobileimage">
+            <img
+              src="http://demo2.posthemes.com/pos_abelo/layout2/img/cms/cms_1.7.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="fourimagesandcard row mt-5">
+          <div class="twoimagesandcard col-12 col-lg-4 col-md-6 mb-3">
+            <div class="card mb-3 realimagecard">
+              <div class="row g-0">
+                <div class="col-md-3 col-4">
+                  <img
+                    src="http://demo2.posthemes.com/pos_abelo/layout2/34-home_default/brixton-patrol-all-terrain-anorak-jacket.jpg"
+                    class="img-fluid rounded-start"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-md-9 col-8">
+                  <div class="card-body">
+                    <h6 class="pt-2 pb-2 text-secondary">
+                      <a href="#">Numkuda USB 2.0 GamePod</a>
+                    </h6>
+
+                    <h5 class="card-title">$13.90</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3 visiblecard">
+              <div class="row g-0">
+                <div class="col-md-3 realimagecard">
+                  <img
+                    src="http://demo2.posthemes.com/pos_abelo/layout2/88-home_default/brown-bear-vector-graphics.jpg"
+                    class="img-fluid rounded-start"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-md-9">
+                  <div class="card-body">
+                    <h6 class="pt-2 pb-2 text-secondary">
+                      <a href="#">Numkuda USB 2.0 GamePod</a>
+                    </h6>
+
+                    <h5 class="card-title">$13.90</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="twoimagesandcard col-12 col-lg-4 col-md-6 mb-3">
+            <div class="card mb-3 realimagecard">
+              <div class="row g-0">
+                <div class="col-md-3 col-4">
+                  <img
+                    src="http://demo2.posthemes.com/pos_abelo/layout2/26-cart_default/originals-kaval-windbreaker-winter-jacket.jpg"
+                    class="img-fluid rounded-start"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-md-9 col-8">
+                  <div class="card-body">
+                    <h6 class="pt-2 pb-2 text-secondary">
+                      <a href="#">Numkuda USB 2.0 GamePod</a>
+                    </h6>
+
+                    <h5 class="card-title">$24.90</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3 visiblecard">
+              <div class="row g-0">
+                <div class="col-md-3 realimagecard">
+                  <img
+                    src="http://demo2.posthemes.com/pos_abelo/layout2/72-cart_default/brown-bear-cushion.jpg"
+                    class="img-fluid rounded-start"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-md-9">
+                  <div class="card-body">
+                    <h6 class="pt-2 pb-2 text-secondary">
+                      <a href="#">Numkuda USB 2.0 GamePod</a>
+                    </h6>
+
+                    <h5 class="card-title">$24.90</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="twoimagesandcard col-12 col-lg-4 col-md-6 mb-3">
+            <div class="card mb-3 realimagecard">
+              <div class="row g-0">
+                <div class="col-md-3 col-4">
+                  <img
+                    src="http://demo2.posthemes.com/pos_abelo/layout2/83-cart_default/juicy-couture-tricot-logo-stripe-jacket.jpg"
+                    class="img-fluid rounded-start"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-md-9 col-8">
+                  <div class="card-body">
+                    <h6 class="pt-2 pb-2 text-secondary">
+                      <a href="#">Numkuda USB 2.0 GamePod</a>
+                    </h6>
+
+                    <h5 class="card-title">$13.90</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3 visiblecard">
+              <div class="row g-0">
+                <div class="col-md-3 realimagecard">
+                  <img
+                    src="http://demo2.posthemes.com/pos_abelo/layout2/26-cart_default/originals-kaval-windbreaker-winter-jacket.jpg"
+                    class="img-fluid rounded-start"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-md-9">
+                  <div class="card-body">
+                    <h6 class="pt-2 pb-2 text-secondary">
+                      <a href="#">Numkuda USB 2.0 GamePod</a>
+                    </h6>
+
+                    <h5 class="card-title">$13.90</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="twoimagesandcard col-12 col-lg-4 col-md-6 mb-3">
+            <div class="card mb-3 realimagecard">
+              <div class="row g-0">
+                <div class="col-md-3 col-4">
+                  <img
+                    src="http://demo2.posthemes.com/pos_abelo/layout2/72-cart_default/brown-bear-cushion.jpg"
+                    class="img-fluid rounded-start"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-md-9 col-8">
+                  <div class="card-body">
+                    <h6 class="pt-2 pb-2 text-secondary">
+                      <a href="#">Numkuda USB 2.0 GamePod</a>
+                    </h6>
+
+                    <h5 class="card-title">$13.90</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3 visiblecard">
+              <div class="row g-0">
+                <div class="col-md-3 realimagecard">
+                  <img
+                    src="http://demo2.posthemes.com/pos_abelo/layout2/33-cart_default/juicy-couture-juicy-quilted-terry-track-jacket.jpg"
+                    class="img-fluid rounded-start"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-md-9">
+                  <div class="card-body">
+                    <h6 class="pt-2 pb-2 text-secondary">
+                      <a href="#">Numkuda USB 2.0 GamePod</a>
+                    </h6>
+
+                    <h5 class="card-title">$13.90</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="twoimagesandcard col-12 col-lg-4 col-md-6 mb-3">
+            <div class="card mb-3 realimagecard">
+              <div class="row g-0">
+                <div class="col-md-3 col-4">
+                  <img
+                    src="http://demo2.posthemes.com/pos_abelo/layout2/52-cart_default/madden-by-steve-madden-cale-6.jpg"
+                    class="img-fluid rounded-start"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-md-9 col-8">
+                  <div class="card-body">
+                    <h6 class="pt-2 pb-2 text-secondary">
+                      <a href="#">Numkuda USB 2.0 GamePod</a>
+                    </h6>
+
+                    <h5 class="card-title">$13.90</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3 visiblecard">
+              <div class="row g-0">
+                <div class="col-md-3 realimagecard">
+                  <img
+                    src="http://demo2.posthemes.com/pos_abelo/layout2/26-cart_default/originals-kaval-windbreaker-winter-jacket.jpg"
+                    class="img-fluid rounded-start"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-md-9">
+                  <div class="card-body">
+                    <h6 class="pt-2 pb-2 text-secondary">
+                      <a href="#">Numkuda USB 2.0 GamePod</a>
+                    </h6>
+
+                    <h5 class="card-title">$13.90</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="twoimagesandcard col-12 col-lg-4 col-md-6 mb-3">
+            <div class="card mb-3 realimagecard">
+              <div class="row g-0">
+                <div class="col-md-3 col-4">
+                  <img
+                    src="http://demo2.posthemes.com/pos_abelo/layout2/67-cart_default/new-balance-fresh-foam-kaymin.jpg"
+                    class="img-fluid rounded-start"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-md-9 col-8">
+                  <div class="card-body">
+                    <h6 class="pt-2 pb-2 text-secondary">
+                      <a href="#">Numkuda USB 2.0 GamePod</a>
+                    </h6>
+
+                    <h5 class="card-title">$24.90</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3 visiblecard">
+              <div class="row g-0">
+                <div class="col-md-3 realimagecard">
+                  <img
+                    src="http://demo2.posthemes.com/pos_abelo/layout2/72-cart_default/brown-bear-cushion.jpg"
+                    class="img-fluid rounded-start"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-md-9">
+                  <div class="card-body">
+                    <h6 class="pt-2 pb-2 text-secondary">
+                      <a href="#">Numkuda USB 2.0 GamePod</a>
+                    </h6>
+
+                    <h5 class="card-title">$24.90</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="twoimagesandcard col-12 col-lg-4 col-md-6 mb-3">
+            <div class="card mb-3 realimagecard">
+              <div class="row g-0">
+                <div class="col-md-3 col-4">
+                  <img
+                    src="http://demo2.posthemes.com/pos_abelo/layout2/33-cart_default/juicy-couture-juicy-quilted-terry-track-jacket.jpg"
+                    class="img-fluid rounded-start"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-md-9 col-8">
+                  <div class="card-body">
+                    <h6 class="pt-2 pb-2 text-secondary">
+                      <a href="#">Numkuda USB 2.0 GamePod</a>
+                    </h6>
+
+                    <h5 class="card-title">$24.90</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3 visiblecard">
+              <div class="row g-0">
+                <div class="col-md-3 realimagecard">
+                  <img
+                    src="http://demo2.posthemes.com/pos_abelo/layout2/72-cart_default/brown-bear-cushion.jpg"
+                    class="img-fluid rounded-start"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-md-9">
+                  <div class="card-body">
+                    <h6 class="pt-2 pb-2 text-secondary">
+                      <a href="#">Numkuda USB 2.0 GamePod</a>
+                    </h6>
+
+                    <h5 class="card-title">$24.90</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="twoimagesandcard col-12 col-lg-4 col-md-6 mb-3">
+            <div class="card mb-3 realimagecard">
+              <div class="row g-0">
+                <div class="col-md-3 col-4">
+                  <img
+                    src="http://demo2.posthemes.com/pos_abelo/layout2/88-home_default/brown-bear-vector-graphics.jpg"
+                    class="img-fluid rounded-start"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-md-9 col-8">
+                  <div class="card-body">
+                    <h6 class="pt-2 pb-2 text-secondary">
+                      <a href="#">Numkuda USB 2.0 GamePod</a>
+                    </h6>
+
+                    <h5 class="card-title">$13.90</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3 visiblecard">
+              <div class="row g-0">
+                <div class="col-md-3 realimagecard">
+                  <img
+                    src="http://demo2.posthemes.com/pos_abelo/layout2/26-cart_default/originals-kaval-windbreaker-winter-jacket.jpg"
+                    class="img-fluid rounded-start"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-md-9">
+                  <div class="card-body">
+                    <h6 class="pt-2 pb-2 text-secondary">
+                      <a href="#">Numkuda USB 2.0 GamePod</a>
+                    </h6>
+
+                    <h5 class="card-title">$13.90</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="twoimagesandcard col-12 col-lg-4 col-md-6 mb-3">
+            <div class="card mb-3 realimagecard">
+              <div class="row g-0">
+                <div class="col-md-3 col-4">
+                  <img
+                    src="http://demo2.posthemes.com/pos_abelo/layout2/61-cart_default/-water-and-wind-resistant-insulated-jacket.jpg"
+                    class="img-fluid rounded-start"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-md-9 col-8">
+                  <div class="card-body">
+                    <h6 class="pt-2 pb-2 text-secondary">
+                      <a href="#">Numkuda USB 2.0 GamePod</a>
+                    </h6>
+
+                    <h5 class="card-title">$13.90</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3 visiblecard">
+              <div class="row g-0">
+                <div class="col-md-3 realimagecard">
+                  <img
+                    src="http://demo2.posthemes.com/pos_abelo/layout2/52-cart_default/madden-by-steve-madden-cale-6.jpg"
+                    class="img-fluid rounded-start"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-md-9">
+                  <div class="card-body">
+                    <h6 class="pt-2 pb-2 text-secondary">
+                      <a href="#">Numkuda USB 2.0 GamePod</a>
+                    </h6>
+
+                    <h5 class="card-title">$13.90</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="fivelogo mt-4 mb-5">
+            <a href="#"
+              ><img
+                src="http://demo2.posthemes.com/pos_abelo/layout2/img/blocklogo/2.jpg"
+                alt=""
+              />
+            </a>
+            <a href="#"
+              ><img
+                src="http://demo2.posthemes.com/pos_abelo/layout2/img/blocklogo/3.jpg"
+                alt=""
+            /></a>
+            <a href="#">
+              <img
+                src="http://demo2.posthemes.com/pos_abelo/layout2/img/blocklogo/4.jpg"
+                alt=""
+            /></a>
+            <a href="#">
+              <img
+                src="http://demo2.posthemes.com/pos_abelo/layout2/img/blocklogo/5.jpg"
+                alt=""
+            /></a>
+            <a href="#"
+              ><img
+                src="http://demo2.posthemes.com/pos_abelo/layout2/img/blocklogo/6.jpg"
+                alt=""
+            /></a>
+          </div>
+        </div>
+      </section>
+      <section
+        class="container-fluid mybluesection bg-primary text-light mt-3 mb-5"
+      >
+        <div class="container row bluediv pt-3">
+          <div class="pt-2 pb-2 col-12 col-lg-6 col-md-12">
+            <h4>Sign Up For Newsletters</h4>
+            <p>Be the First to Know. Sign up for newsletter today !</p>
+          </div>
+          <div class="input-group mybluemail h-50 col-12 col-lg-6 col-md-12">
+            <input
+              type="mail"
+              class="form-control rounded pt-3 pb-3"
+              placeholder="Your Email Adress"
+            />
+            <button type="button" class="btn btn-outline-light bg-dark">
+              Sign Up
+            </button>
+          </div>
+        </div>
+      </section>
+      <footer class="container">
+        <div class="row myheadoffooter">
+          <div class="col-12 col-lg-3 col-md-6">
+            <img
+              src="http://demo2.posthemes.com/pos_abelo/layout2/img/pos-abelo-logo-1580439594.jpg"
+              alt=""
+            />
+            <p class="text-secondary pt-3">
+              We are a team of designers and developers that create high quality
+            </p>
+            <h6 class="text-dark pb-3">
+              Address:<span class="text-secondary">
+                4710-4890 Breckinridge St, Fayetteville</span
+              >
+            </h6>
+            <h6 class="text-dark pb-3">
+              Email:<span class="text-secondary"> support@plazathemes.com</span>
+            </h6>
+            <h6 class="text-dark">
+              Call Us:<span class="text-secondary"> (+800)123456789</span>
+            </h6>
+          </div>
+          <div class="col-12 col-lg-3 col-md-6 d-flex justify-space-between">
+            <div class="myinformation">
+              <h5 class="pb-3">Information</h5>
+              <ul>
+                <li><a href="#" class="text-secondary">Delivery</a></li>
+                <li><a href="#" class="text-secondary">Contact us</a></li>
+                <li><a href="#" class="text-secondary">Secure Payment</a></li>
+                <li><a href="#" class="text-secondary">About Us</a></li>
+                <li><a href="#" class="text-secondary">Sitemap</a></li>
+                <li><a href="#" class="text-secondary">Stores</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3 col-md-6">
+            <div class="myinformation">
+              <h5 class="pb-3">Custom Links</h5>
+              <ul>
+                <li><a href="#" class="text-secondary">Legal Notice</a></li>
+                <li><a href="#" class="text-secondary">Price Drop</a></li>
+                <li><a href="#" class="text-secondary">New Products</a></li>
+                <li><a href="#" class="text-secondary">Best Sales</a></li>
+                <li><a href="#" class="text-secondary">Login</a></li>
+                <li><a href="#" class="text-secondary">My Account</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3 col-md-6 myandourblog">
+            <h5 class="pb-3">From Our Blog</h5>
+            <div class="d-flex ourblog">
+              <img
+                src="http://demo2.posthemes.com/pos_abelo/layout2/modules/xipblog/img/home_default-4.jpg"
+                alt=""
+              />
+              <div>
+                <h6><a href="#">This Is Second Post For XipBlog</a></h6>
+                <p class="text-secondary">
+                  Posted by <span class="text-dark">Demo Posthemes</span>
+                </p>
+                <p class="text-secondary">Jan 29.2020</p>
+              </div>
+            </div>
+            <div class="d-flex justify-space-between ourblog">
+              <img
+                src="http://demo2.posthemes.com/pos_abelo/layout2/modules/xipblog/img/home_default-3.jpg"
+                alt=""
+              />
+              <div>
+                <h6><a href="#">This Is First Post For XipBlog</a></h6>
+                <p class="text-secondary">
+                  Posted by <span class="text-dark">Demo Posthemes</span>
+                </p>
+                <p class="text-secondary">Jan 29.2020</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="midfooter row justify-space-between pb-3 pt-3">
+          <div class="col-12 col-lg-6 col-md-12 d-flex">
+            <h5>Payment:</h5>
+            <img
+              src="http://demo2.posthemes.com/pos_abelo/layout2/img/cms/payment.png"
+              alt=""
+            />
+          </div>
+          <div class="col-12 col-lg-6 col-md-12 d-flex mylastlinks">
+            <h5>Follow Us:</h5>
+            <ul>
+              <li>
+                <a href="#" class="facebooklink"
+                  ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#" class="instagramlink"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#" class="googlelink"
+                  ><i class="fa-brands fa-youtube"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#" class="googlelink"
+                  ><i class="fa-brands fa-google"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#" class="twitterlink"
+                  ><i class="fa-brands fa-twitter"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="lastoffooter mt-5 mb-3">
+          <ul class="d-flex">
+            <li><a href="#">Online Shopping</a></li>
+            <li><a href="#">Promotion</a></li>
+            <li><a href="#">My Order</a></li>
+            <li><a href="#">Custom Service</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Most Populars</a></li>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Special Products</a></li>
+            <li><a href="#">Manufacturers</a></li>
+          </ul>
+        </div>
+        <div class="lastoffooter2 mb-5">
+          <ul class="d-flex mx-auto">
+            <li><a href="#">Our Stores</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Payments</a></li>
+            <li><a href="#">Warantee</a></li>
+            <li><a href="#">Refunds</a></li>
+            <li><a href="#">Checkout</a></li>
+            <li><a href="#">Discounts</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+          </ul>
+        </div>
+        <div class="mylastdiv">
+          <h6 class="text-secondary">
+            Copyright©<span class="text-info">Posthemes.</span> All Rights
+            Reserved
+          </h6>
+        </div>
+      </footer>
+      <div
+        class="mydownarrow"
+        onclick="topFunction()"
+        id="myBtn"
+        title="Go to top"
+      >
+        <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
